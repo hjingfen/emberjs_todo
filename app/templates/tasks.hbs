@@ -1,0 +1,23 @@
+<div style="width:500px; height:500px; border:1px solid #000; margin-left: auto; margin-right: auto; margin-top: 30px;
+  padding: 20px;">
+
+  <h1 style="text-align: center;">Todos</h1>
+
+  <div>
+
+    {{input type="text" value=newTask placeholder="What need to be done?" enter="createTask"}}
+
+    <div style="margin-top: 10px;">
+      {{input type="checkbox" checked=finishAll}}
+      select all
+    </div>
+
+    <ul>
+        {{#each model as |task|}}
+            {{task-detail content=task}}
+        {{/each}}
+    </ul>
+
+  </div>
+
+</div>
